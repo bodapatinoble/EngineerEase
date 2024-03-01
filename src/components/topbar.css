@@ -1,0 +1,131 @@
+.navbar {
+    display: flex;
+    background-color: #fffbfb; /* Example background color */
+    padding: 1px; 
+    box-sizing: border-box;/* Example height */
+  }
+  .nav-item {
+    color: white; /* Example text color */
+    text-align: center; /* Centers text horizontally */
+  }  
+  .flex {
+    flex: 1 8%; /* Item 1, takes 25% of available space */
+    background-color: rgb(253, 255, 255); 
+    border: 0.5px solid #f0edf1; /* Border for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(197, 13, 243, 0.1); /* Box shadow for the card */
+    padding: 0px 10px; /* Padding inside the card */
+    padding-top: 4px;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .flex1 {
+    flex: 1 12%; /* Item 1, takes 25% of available space */
+    background-color: rgb(253, 255, 255); 
+    flex-direction: column;
+    border: 0.5px solid #f0edf1; /* Border for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(197, 13, 243, 0.1); /* Box shadow for the card */
+    padding: 10px; /* Padding inside the card */
+  } 
+
+   .flex2 {
+    flex: 1 70%;/*  Item 2, takes 50% of available space */
+    background-color: rgb(244, 240, 242);
+  }
+
+  .PostSearchBar{
+    width: 80vh;
+    border-color: rgb(244, 251, 251);
+    margin-top: 10px;
+  }
+  .EmployeeSearchBar{
+    border-color: rgb(92, 13, 124);
+    margin-top: 18px;
+    width: 70vh;
+  }
+  .navProfImg{
+    width: 40px;
+    border-radius: 70%;
+    margin-top: 18px;
+    margin-left: 10px;
+  }
+  .navProfImg1{
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 18px;
+    margin-left: 10px;
+  }
+  .flex3 {
+    flex: 1 10%; /* Item 3, takes 25% of available space */
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 8px;
+  }
+  .flex5{
+    flex: 5%;
+    background-color: rgb(114, 76, 137);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+  }
+  .flex4 {
+    flex: 1 70%; /* Item 3, takes 25% of available space */
+    flex-direction: row;
+    background-color:  rgb(114, 76, 137);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+  }
+  
+  .vertical-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.profile1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    margin-top: 5px;
+    background-color: rgb(104, 58, 133);  
+    border-radius: 5px;
+}
+
+.profile1 img {
+    width: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Ensure it's a circular shape */
+    padding: 10px;
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color:rgb(102, 96, 96);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.vertical-menu div {
+    padding: 20px 10px; /* Adjust padding as needed */
+    cursor: pointer; /* Provide a pointer cursor for better UX */
+    align-items: left;
+}
+
+.vertical-menu div:hover {
+    background-color:  rgb(114, 76, 137); /* Change background color on hover */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.dashboardTopSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

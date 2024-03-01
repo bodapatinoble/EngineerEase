@@ -1,0 +1,203 @@
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80vh;
+  }
+  .card h4 {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .profile h2 {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 20px;
+  }
+  .post h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+    padding-left: 10px;
+
+  }
+  .post img{
+    width : 100%;
+    border-radius: 18px;
+    height: 250px;
+  }
+  .post p {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+
+  }
+  .read-more {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: blue;
+  }
+  .repo-btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffb700;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+  .card1 {
+    /* max-width: 400px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card-content p {
+    margin-bottom: 1px;
+    color: #555;
+    text-align: left;
+
+  }
+  
+  .ReviewBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  .FeedbackBtn{
+    margin-top: 10px;
+    background-color: rgb(52, 177, 226);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  .ReviewBtn:hover {
+    background-color: #078d19;
+  }
+  .FeedbackBtn:hover {
+    background-color: #08708d;
+  }
+  .InteractionStats{
+    display: flex;
+    margin-top: 5px;
+    border-top: 1px solid #d5d1d1; 
+  }
+  .CountLike{
+    color:#969a9a;
+    padding: 4px;
+    font-weight: normal;
+    font-size: 14px; 
+    cursor: pointer;
+    text-align: right;
+  }
+  .Divider{
+    color:#08708d;
+    padding: 2px;
+    font-weight: normal;
+    font-size: 16px; 
+  }
+  .CountComment{
+    color:#969a9a;
+    padding: 4px;
+    font-weight: normal;
+    font-size: 14px; 
+    cursor: pointer;
+    text-align: right;
+
+  }
+
+  .InteractionOptions{
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+  }
+  .InteractionOptions img{
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .Like{
+    color:#969a9a;
+    padding: 2px;
+    margin-right: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px; 
+
+  }
+  .Comment{
+    color:#969a9a;
+    padding: 2px;
+    margin-right: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px; 
+
+  }.Share{
+    color:#969a9a;
+    padding: 2px;
+    margin-right: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px; 
+
+  }

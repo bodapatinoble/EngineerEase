@@ -1,0 +1,110 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: center; /* Align text center */
+  text-shadow: #d350bf;
+}
+.inputfields{
+  padding-left: 15px;
+} 
+.SubmitContainer{
+  display: flex;
+  flex-direction: row;
+}
+.forgetpassword{
+  padding-left: 2px; 
+  margin-top: 5px; 
+  margin-bottom: 10px;
+  color:#958f8f;
+  font-size: 12px;
+}
+.forgetpassword span{
+    color: #0056b3;
+    cursor: pointer;
+} 
+.SignUpBtn{
+  width: 44%;
+  padding: 10px;
+  margin-left: 15px;
+  background-color: #d350bf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #531f4b;
+  border-radius: 5px;
+
+}
+.LoginBtn{
+  width: 44%;
+  padding: 10px;
+  margin-left: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.LoginBtn1{
+  width: 90%;
+  padding: 10px;
+  margin-left: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.BrandName{
+  display: flex;
+  justify-content: center;
+  padding-left: 18px; 
+  margin-top: 22px; 
+  margin-bottom: 10px;
+  color:#958f8f;
+  font-size: 12px;
+  cursor: pointer;
+}
+.BrandName span{
+  padding-left: 8px;
+  color: #531f4b;
+  font-size: 12px;
+}
+.TermsAndConditions{
+  justify-content: center;
+  padding-left: 18px; 
+  margin-top: 22px; 
+  margin-bottom: 10px;
+  color:#958f8f;
+  font-size: 12px;
+  cursor: pointer;
+}
+.TermsAndConditions span{
+  padding-left: 8px;
+  color: #531f4b;
+  font-size: 12px;
+}
+button:hover {
+  background-color: #0056b3;
+}
