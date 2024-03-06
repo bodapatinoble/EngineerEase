@@ -1,0 +1,67 @@
+.UserCard {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .UserProfile{
+    display: flex;
+    justify-content: space-between;
+}
+  .Userprofile-image {
+    width: 40%;
+    justify-content: space-between;
+    border-radius: 5px;
+    border-color:aqua;
+  }
+
+  .Userprofile-details {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .Userbuttons {
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .Userbuttons button {
+    margin-right: 10px;
+    /* padding: 8px 12px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Userbuttons button:hover {
+    background-color: #f0f0f0;
+  }
+  .ConnectBtn button:hover {
+    background-color: rgb(66, 174, 66); 
+    color: white;
+  }
+  .ConnectBtn{
+    background-color: rgb(66, 174, 66); 
+    color: white;
+    margin: 5px;
+    padding: 20px;
+    width: 28%;
+  }
+  .ViewProfile{
+    background-color: rgb(4, 72, 131); 
+    color: white;
+    padding: 20px;
+    width: 35%;
+
+  }
+  .Close{
+    background-color: rgb(214, 28, 8); 
+    color: white;
+    padding: 20px;
+    width: 28%;
+
+  }

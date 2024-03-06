@@ -1,48 +1,11 @@
 import React ,{useState}from 'react';
 import "./articles.css";
+import articlesData from '../components/articlesData.json'
 const Articles = () => {
     const [searchQuery, setSearchQuery] = useState(""); // State to hold the search query
 
     const repoUrl = "https://github.com/yourusername/yourrepository"; // Replace with your repository URL
     var count =1;
-    const articlesData = [
-        {
-            id: 1,
-            profileImg: "logo192.png",
-            profileName: "Noble Tej",
-            skills: ["React Native", "Python"],
-            title: "Optimization Techniques in Python",
-            description: "Optimization Techniques in Python Optimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in Python",
-            coverImage: "cover_1.jpg",
-            repoUrl: "https://github.com/username/optimization-techniques-python",
-            reviewUrl: "https://purpletalk.darwinbox.in/ms/vibe/home/posts/all"
-        },
-        {
-            id: 2,
-            profileImg: "logo192.png",
-            profileName: "Mahesh",
-            skills: ["Pega Developer"],
-            title: "Optimization Techniques in Python",
-            description: "Optimization Techniques in Python Optimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in Python",
-            coverImage: "cover_1.jpg",
-            repoUrl: "https://github.com/username/optimization-techniques-python",
-            reviewUrl: "https://purpletalk.darwinbox.in/ms/vibe/home/posts/all"
-        },
-        {
-            id: 3,
-            profileImg: "logo192.png",
-            profileName: "Ravi Tej",
-            skills:["React Native", "Java"],
-            title: "Optimization Techniques in Python",
-            description: "Optimization Techniques in Python Optimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in PythonOptimization Techniques in Python",
-            coverImage: "cover_1.jpg",
-            repoUrl: "https://github.com/username/optimization-techniques-python",
-            reviewUrl: "https://purpletalk.darwinbox.in/ms/vibe/home/posts/all"
-        },
-        // Add more articles as needed
-    ];
-
-       // Handler to update search query
        const handleSearch = (event) => {
         setSearchQuery(event.target.value);
     };
@@ -64,7 +27,7 @@ const Articles = () => {
                     </div>
                 </div>
                     <h4><b>{article.title}</b></h4>
-                    <p>{article.descriptio}</p>
+                    <p>{article.description}</p>
                 <div className="card1">
                     <img src={article.coverImage} alt="Code Review Image" className="card-image"/>
                     <div class="card-content">
