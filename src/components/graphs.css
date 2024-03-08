@@ -1,11 +1,12 @@
-.card {
-    border: 1px solid #ccc;
+.piecard {
+    border: 1px solid rgb(220, 214, 245);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 18px rgba(67, 9, 240, 0.1);
+    background-color: rgb(235, 215, 250);
 }
 
 .pie-chart {
     width: 300px; /* Adjust width as needed */
-    height: 300px; /* Adjust height as needed */
+    height: 250px; /* Adjust height as needed */
 }

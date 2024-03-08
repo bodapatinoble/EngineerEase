@@ -9,7 +9,7 @@ const Card = ({ profileImg, profileName, skills, experience, onConnect, onViewPr
     <div className='UserProfile'>
       <img src={profileImg} alt="Profile" className="Userprofile-image" />
       <div className="Userprofile-details">
-        <p>{profileName}</p>
+        <h1>{profileName}</h1>
         <p>Skills: {skills}</p>
         <p>Experience: {experience}</p>
       </div>
@@ -24,23 +24,7 @@ const Card = ({ profileImg, profileName, skills, experience, onConnect, onViewPr
   );
 };
 
-const UserProfile = () => {
-
-//   // User profile details in JSON format
-// //   const userProfile =[
-// //     {
-// //     profileImage: "avatar_25.jpg",
-// //     username: "Noble Tej",
-// //     skills: ["React, JavaScript, HTML, CSS"],
-// //     experience: "2 years"
-// //   },
-// //   {
-// //     profileImage: "avatar_25.jpg",
-// //     username: "JohnDoe",
-// //     skills: ["React, JavaScript, HTML, CSS"],
-// //     experience: "5 years"
-// //   },
-// ];
+const UserProfile = ({ filteredProfiles }) => {
 
   const handleConnect = () => {
     // Handle connect button click
@@ -57,8 +41,8 @@ const UserProfile = () => {
   };
 
   return (
-    <div>{
-    userProfile.map(userInfo => (
+    <div className='center-container'>{
+      filteredProfiles.map(userInfo => (
     <Card
     key={userInfo.id}
       profileImg={userInfo.profileImg}

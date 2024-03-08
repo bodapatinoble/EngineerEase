@@ -15,8 +15,10 @@ const Articles = () => {
      article.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()))
  );
   return (
-    <div>
+    // className="articles-container" style={{ maxHeight: "400px", overflowY: "auto" }}
+    <div className='PostPage' >
         <input className="PostSearchBar" type="text" placeholder="Search.." value={searchQuery} onChange={handleSearch} />
+        <div  className="articles-container">
         { searchQuery === ""? articlesData.map(article => (
             <div className="card">
                 <div className="profile">
@@ -27,12 +29,13 @@ const Articles = () => {
                     </div>
                 </div>
                     <h4><b>{article.title}</b></h4>
-                    <p>{article.description}</p>
+                    <p className = "articledescript">{article.description}</p>
                 <div className="card1">
                     <img src={article.coverImage} alt="Code Review Image" className="card-image"/>
                     <div class="card-content">
                         {/* <p>Repository Link: <a href="https://github.com/username/optimization-techniques-python" target="_blank">https://github.com/username/optimization-techniques-python</a></p> */}
-                        <button className="ReviewBtn" onClick={() => window.open(article.repoUrl, '_blank')}>Review Code</button><span></span>
+                        {/* <button className="ReviewBtn" onClick={() => window.open(article.repoUrl)}>Review Code</button><span></span> */}
+                        <button className="ReviewBtn" onClick={() => { window.location.href = article.repoUrl}}>Review Code</button><span></span>
                         <button className="FeedbackBtn" onClick={() => window.open(article.reviewUrl, '_blank')}>FeedBack</button>
                     </div>
                 </div>
@@ -81,7 +84,8 @@ const Articles = () => {
             </div>
             ))
         )}
-    </div>
+        </div>
+     </div>
   );
 }
 

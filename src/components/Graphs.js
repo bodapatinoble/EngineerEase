@@ -14,7 +14,15 @@ const TechnologiesCard = () => {
                 label: "Technologies",
                 data: [15, 20, 10, 15, 10, 10, 5, 10, 5],
                 backgroundColor: [
-                    "#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#FF9900", "#FF0000", "#66FF66", "#FFFF66"
+                    "#FF6384", // Bright red
+                    "#36A2EB", // Bright blue
+                    "#FFCE56", // Bright yellow
+                    "#4BC0C0", // Bright cyan
+                    "#8A2BE2", // Dark purple
+                    "#FFA500", // Orange
+                    "#FF0000", // Red
+                    "#32CD32", // Dark green
+                    "#FFD700"  // Gold
                 ]
             }]
         };
@@ -32,7 +40,19 @@ const TechnologiesCard = () => {
             data: data,
             options: {
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Employee Technology Breakdown',
+                        fontSize: 24, // Adjust the font size as needed
+                        fontColor: "#333" ,
+                        position: 'top'
+                    },
+                    legend: {
+                        position: 'right', // Position legends to the right
+                    },
+                }
             }
         });
 
@@ -45,7 +65,7 @@ const TechnologiesCard = () => {
     }, []);
 
     return (
-        <div className="card">
+        <div className="piecard">
             <canvas ref={chartRef} className="pie-chart" />
         </div>
     );

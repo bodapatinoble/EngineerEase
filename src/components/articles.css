@@ -5,6 +5,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 80vh;
+    margin: 10px;
   }
   .card h4 {
     text-align: right;
@@ -18,7 +19,7 @@
     margin-bottom: 15px;
   }
   .profile h2 {
-    text-align: right;
+    text-align: left;
     font-size: 14px;
     color: #555;
   }
@@ -191,13 +192,25 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 14px; 
-
-  }.Share{
+  }
+  .Share{
     color:#969a9a;
     padding: 2px;
     margin-right: 6px;
     font-weight: bold;
     cursor: pointer;
     font-size: 14px; 
-
+  }
+  .articles-container {
+    max-height: 100%; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds the maximum height */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    padding-right:2px; 
+    width: 100%; /* Set width to 100% */
+  }
+  .articledescript{
+   color: #050505;
+  }
+  .PostPage{
+    margin: 20px;
   }

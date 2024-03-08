@@ -13,37 +13,80 @@ export default function Topbar(){
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    const arrow = "<";
     const [searchMainQuery, setSearchMainQuery] = useState(""); // State to hold the search query
+    const [isSearchOpen, setIsSearchOpen] = useState(false); // State to track search bar visibility
 
     const handleSearch = (event) => {
         setSearchMainQuery(event.target.value);
     };
 
-     // Filter the userProfile based on the searchMainQuery
-     const filteredProfiles = userProfile.filter(profile =>
+    const toggleSearchBar = () => {
+        setIsSearchOpen(!isSearchOpen);
+      };
+      const onSearch = (profileName) => {
+        setSearchMainQuery(profileName);
+        console.log("search-------------------------->", profileName);
+        setIsSearchOpen(false); // Close the dropdown
+
+      }
+
+    //  // Filter the userProfile based on the searchMainQuery
+    //  const filteredProfiles =  userProfile.filter(profile =>
+    //     profile.skills.some(skill =>
+    //         skill.toLowerCase().includes(searchMainQuery.toLowerCase())
+    //     )
+    // );
+    const formattedQuery = searchMainQuery.toLowerCase(); // Convert searchMainQuery to lowercase
+    const filteredProfiles = userProfile.filter(profile =>
+        profile.profileName.toLowerCase().includes(formattedQuery) || // Check if profileName matches searchMainQuery
         profile.skills.some(skill =>
-            skill.toLowerCase().includes(searchMainQuery.toLowerCase())
+            skill.toLowerCase().includes(formattedQuery)
         )
     );
     return (
         <><div class="navbar">
+            <div className="topbar">
             <div className="flex">  
                 <img src="purpletalk.png" alt="Company Logo" />
             </div>
             <div class="nav-item flex4">
-                 <input className = "EmployeeSearchBar" type="text" placeholder="EmplSearch.." 
-                 value={searchMainQuery}
-                 onChange={handleSearch}/>
+                <div className="center-container">
+                    <input
+                        className="EmployeeSearchBar"
+                        type="text"
+                        placeholder="EmplSearch.."
+                        value={searchMainQuery}
+                        onChange={handleSearch}
+                    />
+                          <div className="dropdown">
+                {
+                userProfile.filter(item => {
+                    const searchTerm = searchMainQuery.toLowerCase();
+                    const profileNameMatched = item.profileName.toLowerCase().includes(searchTerm);
+
+                    // const full_name = item.profileName.toLowerCase();
+                    // return searchTerm && full_name.startsWith(searchTerm);
+                    const skillsMatched = item.skills.some(skill =>
+                        skill.toLowerCase().includes(searchTerm)
+                    );
+                    return(skillsMatched && searchTerm  );
+                })
+                .map((item) => (
+                    <div key= {item.id} onClick={() => onSearch(item.profileName)} className="dropdown-row">
+                      {item.profileName}
+                    </div>
+                ))}
              </div>
-             <div className="flex5">
-                    <img  className = "navProfImg" src="avatar_25.jpg" alt="Profile Image" />
-                    <img  className = "navProfImg1" src="notification.jpeg" alt="Profile Image" />
-                    <img  className = "navProfImg" src="avatar_25.jpg" alt="Profile Image" />
+                </div>
              </div>
+       
+             </div>
+             {/* <div className="flex5">
+                    <img  className = "navProfImg" src="avatar_25.jpg" alt="Profile Image" />
+             </div> */}
              {/* {searchMainQuery && <UserProfile userProfile={filteredProfiles} />} */}
            </div>
-        <div class="navbar">
+        <div class="navbar1">
                 <div class="nav-item flex1">
                     {/* Profile Image with Name */}
                     <div className="profile1">
@@ -51,24 +94,26 @@ export default function Topbar(){
                         <span className="profile-name">John Doe</span>
                     </div>
                     <div class="vertical-menu">
-                        <div>Dashboard</div>
-                        <div>Users</div>
-                        <div>Categories</div>
-                        <div>Settings</div>
-                        <div>Blogs</div>
+                      <div> <a href="/dashboard">Dashboard</a>  </div> 
+                      <div> <a href="/users">Users</a></div> 
+                      <div> <a href="/settings">Settings</a></div> 
+                      <div> <a href="/blogs">Blogs</a></div> 
+                      
                     </div>
                 </div>
                 <div class="nav-item flex2">
-                {searchMainQuery ? <UserProfile userProfile={filteredProfiles}/> :
+                {searchMainQuery ? <UserProfile filteredProfiles={filteredProfiles}/> :
 
-                    <><div className="dashboardTopSection">
-                            <Graphs />
-                        </div><div class="center-container">
+                    <><div class="center-container">
                                 <Articles />
                             </div></>
 }
                 </div>
-                <div class="nav-item flex3">Item 3</div>
+                <div class="nav-item flex3">Item 3
+                    <div className="dashboardTopSection">
+                                <Graphs />
+                            </div>
+                </div>
                 
        </div></>
     )
