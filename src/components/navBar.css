@@ -1,0 +1,86 @@
+/* Navbar.css */
+.navbar2 {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #5b0d92;
+    padding: 10px 20px;
+    box-shadow: 10px 2px 14px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+  }
+  
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo1 {
+    margin-bottom: 4px;
+    margin-left: 20px;
+
+  }
+  
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    border-color: azure;
+  }
+  .notification-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+  }
+  .profile2{
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    right: 40px; /* Adjust right position as needed */
+        /* padding-left: 100px;
+        flex-direction: row-reverse; */
+    box-shadow: 0px 2px 2px rgb(216, 199, 230);
+
+  }
+  
+  /* Side menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    transition: left 0.3s ease;
+  }
+  
+  .side-menu.show {
+    left: 0; /* slide in when showMenu is true */
+  }
+  
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    padding: 15px;
+  }
+  
+  .side-menu ul li a {
+    color: #5b0d92;
+    text-decoration: none;
+  }
+  
+  .side-menu ul li a:hover {
+    background-color: #555;
+  }
+  

@@ -214,3 +214,69 @@
   .PostPage{
     margin: 20px;
   }
+  .LargeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9734a9f5; /* Blue color, you can change it */
+    color: #fff; /* White text color */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Adjust as needed */
+    border-radius: 2px;
+}
+
+.LargeButton:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+.PopupForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.PopupForm h2 {
+  margin-top: 0;
+}
+
+.PopupForm input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ButtonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonGroup button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ButtonGroup button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.ButtonGroup button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.ButtonGroup button[type="button"] {
+  background-color: #ccc;
+}
+
+.ButtonGroup button[type="button"]:hover {
+  background-color: #bbb;
+}

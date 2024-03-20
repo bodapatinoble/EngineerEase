@@ -1,51 +1,79 @@
+.chat-screen-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure full height */
+}
+
+.chat-content {
+  display: flex;
+  flex: 1; /* Fill remaining space */
+}
+
+.chat-list {
+  flex: 0 0 240px; /* Fixed width of 200px for the chat list */
+  border-right: 1px solid #cccccc32; /* Optional: Add a border between chat list and chat screen */
+  padding: 10px;
+
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+.chat-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.last-message {
+  color: #777;
+}
+
+
 .chat-screen {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .message-list {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 10px;
-  }
-  
-  .message {
-    margin: 5px 0;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  
-  .user {
-    background-color: #DCF8C6;
-    align-self: flex-end;
-  }
-  
-  .message-input-form {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-  }
-  
-  .message-input {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .send-button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .send-button:hover {
-    background-color: #0056b3;
-  }
-  
+  flex: 2; /* Take up other half of the remaining space */
+  padding: 10px;
+}
+
+.message-list {
+  height: calc(100% - 50px); /* Adjust height of message list */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+/* Add styling for message input form and other elements as needed */
+.message-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc60;
+}
+.message-profInfo{
+  display: flex;
+  align-items: center;
+}
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
